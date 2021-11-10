@@ -31,15 +31,14 @@ const FetchUser = () => {
           </thead>
           {!state.loading &&
             state.users.map((user) => (
-              <li key={user.id} className="list-group-item">
-                <tbody>
-                  <tr>
-                    <td> {user.id}</td>
-                    <td> {user.title}</td>
-                    <td> <Button type="primary" onClick={() => { history.push(`/userDetails/${user.id}`)}}>Get Details</Button></td>
-                  </tr>
-                </tbody>
-              </li>
+              <tbody>
+                <tr>
+                  <td> {user.id}</td>
+                  <td> {user.title}</td>
+                  <td> <Button type="primary" onClick={() => { history.push(`/userDetails/${user.id}`) }}>Get Details</Button></td>
+                </tr>
+              </tbody>
+
             ))}
         </table>
       </div>

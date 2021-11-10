@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./userComponent.css"
 
 export default function UserDetails() {
     const [user, setUser] = useState([]);
@@ -32,6 +33,7 @@ return (
        
             <li className="list-group-item">id:{user.id}</li>
             <li className="list-group-item">title: {user.title}</li>
+            <li className="list-group-item">body: {user.body}</li>
            
        
         </ul>
